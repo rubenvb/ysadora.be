@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ysadora Zoë Maria Van Boxem van der Esch</title>
+
+<style>
+@font-face {
+  font-family: "Boopee";
+  src: url("fonts/Boopee.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Juvenile Bold";
+  src: url("fonts/Juvenile-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --font-name: "Boopee", cursive, sans-serif;
+  --font-body: "Juvenile Bold", "Comic Sans MS", sans-serif;
+  --cream: #f5efe3;
+  --cream2: #fbf7ef;
+  --sage: #687565;
+  --deep: #435144;
+  --forest: #354437;
+  --terracotta: #b77d68;
+  --rust: #986553;
+  --ochre: #b69a65;
+  --pink: #d8aaa0;
+  --brown: #66594d;
+  --ink: #4e5149;
+  --leaf: #596754;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: normal;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================================================
+   GLOBAL BOTANICALS
+   ========================================================= */
+
+.foliage {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.foliage svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.foliage-top-left {
+  width: 330px;
+  height: 300px;
+  left: -65px;
+  top: -30px;
+}
+
+.foliage-top-right {
+  width: 300px;
+  height: 320px;
+  right: -60px;
+  top: -35px;
+  transform: scaleX(-1);
+}
+
+.foliage-bottom-left {
+  width: 330px;
+  height: 300px;
+  left: -70px;
+  bottom: -70px;
+  transform: rotate(8deg);
+}
+
+.foliage-bottom-right {
+  width: 350px;
+  height: 300px;
+  right: -70px;
+  bottom: -60px;
+  transform: scaleX(-1) rotate(8deg);
+}
+
+.leaf {
+  fill: var(--sage);
+}
+
+.leaf-dark {
+  fill: var(--deep);
+}
+
+.leaf-light {
+  fill: #819078;
+}
+
+.flower {
+  fill: var(--terracotta);
+}
+
+.flower-light {
+  fill: var(--pink);
+}
+
+.trunk {
+  fill: var(--brown);
+}
+
+.branch-line {
+  stroke: var(--deep);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,255,255,.85),
+      transparent 65%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,.35) 0%,
+      rgba(255,255,255,.15) 45%,
+      rgba(255,255,255,.05) 70%,
+      rgba(255,255,255,.35) 100%
+    ),
+    url("images/background.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, center, bottom center;
+  background-size: auto, 100% 100%, cover;
+  background-attachment: scroll, scroll, fixed;
+
+  padding: 100px 24px;
+}
+
+.hero-inner {
+  max-width: 850px;
+  position: relative;
+  z-index: 5;
+  text-shadow:
+    0 2px 20px rgba(255,255,255,.9),
+    0 1px 4px rgba(255,255,255,.8);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 30px;
+  color: var(--sage);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: var(--font-name);
+  font-weight: normal;
+  font-size: clamp(140px, 26vw, 300px);
+  line-height: 1;
+  letter-spacing: .01em;
+  color: var(--deep);
+  margin: 0;
+}
+
+.hero-name {
+  display: block;
+  color: var(--terracotta);
+}
+
+.hero-fullname {
+  font-family: var(--font-body);
+  color: var(--brown);
+  letter-spacing: .04em;
+  font-size: clamp(36px, 5.2vw, 48px);
+  margin-top: 8px;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 32px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 6px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  text-align: center;
+}
+
+.scroll-label {
+  display: inline-block;
+  font-size: 24px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--deep);
+  background: rgba(255,255,255,.88);
+  padding: 12px 26px;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.14);
+}
+
+.scroll::after {
+  content: "";
+  width: 2px;
+  height: 32px;
+  display: block;
+  background: rgba(255,255,255,.88);
+  margin: 8px auto 0;
+  box-shadow: 0 0 10px rgba(0,0,0,.14);
+}
+
+/* =========================================================
+   ORIGINAL ANIMALS
+   ========================================================= */
+
+.animal {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.animal svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hero-fox {
+  width: 155px;
+  height: 155px;
+  left: 7%;
+  bottom: 10%;
+}
+
+.hero-rabbit {
+  width: 130px;
+  height: 150px;
+  right: 7%;
+  bottom: 12%;
+}
+
+.hero-bird {
+  width: 90px;
+  height: 90px;
+  right: 17%;
+  top: 15%;
+}
+
+.hero-deer {
+  width: 110px;
+  height: 150px;
+  left: 14%;
+  top: 15%;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  padding: 145px 24px;
+  background: var(--cream2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-inner {
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.ornament {
+  color: var(--ochre);
+  font-size: 44px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--deep);
+  font-size: clamp(100px, 14vw, 148px);
+  line-height: .95;
+  margin: 0 0 28px;
+}
+
+.intro p {
+  font-family: var(--font-body);
+  color: var(--brown);
+  font-size: 58px;
+  line-height: 1.4;
+  margin: auto;
+}
+
+/* =========================================================
+   WOODLAND
+   ========================================================= */
+
+.woodland {
+  min-height: 650px;
+  overflow: hidden;
+  background: var(--sage);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moon {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #eee3ce;
+  opacity: .25;
+  position: absolute;
+  top: 65px;
+  right: 17%;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  color: #eee3ce;
+  opacity: .65;
+}
+
+.stars span {
+  position: absolute;
+}
+
+.s1 { left: 18%; top: 22%; }
+.s2 { left: 31%; top: 13%; }
+.s3 { right: 29%; top: 20%; }
+.s4 { right: 13%; top: 32%; }
+.s5 { left: 43%; top: 28%; }
+.s6 { left: 72%; top: 42%; }
+
+.hill {
+  position: absolute;
+  bottom: -150px;
+  left: -10%;
+  width: 120%;
+  height: 330px;
+  border-radius: 50% 50% 0 0;
+  background: var(--deep);
+}
+
+.hill-back {
+  position: absolute;
+  bottom: -95px;
+  left: -20%;
+  width: 115%;
+  height: 280px;
+  border-radius: 50% 50% 0 0;
+  background: var(--leaf);
+}
+
+.woodland-content {
+  position: relative;
+  z-index: 6;
+  text-align: center;
+  color: var(--cream2);
+}
+
+.woodland-small {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 32px;
+  opacity: .8;
+}
+
+.woodland-small-low {
+  margin-top: 90px;
+}
+
+.woodland h2 {
+  font-family: var(--font-name);
+  font-weight: normal;
+  color: var(--cream2);
+  font-size: clamp(116px, 20vw, 220px);
+  margin: 20px 0;
+}
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.details {
+  padding: 140px 24px;
+  background: var(--cream2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.details-list {
+  max-width: 700px;
+  margin: 55px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.detail {
+  padding: 25px;
+}
+
+.detail-icon {
+  color: var(--terracotta);
+  font-size: 56px;
+}
+
+.detail-label {
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+.detail-value {
+  font-family: var(--font-body);
+  color: var(--brown);
+  font-size: 60px;
+}
+
+/* =========================================================
+   GIFTS
+   ========================================================= */
+
+.gifts {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 24px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.gifts-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.gifts-intro {
+  max-width: 780px;
+  margin: 0 auto 65px;
+  font-family: var(--font-body);
+  font-size: 56px;
+  line-height: 1.4;
+  color: var(--brown);
+}
+
+.gift-grid {
+  max-width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.gift-card {
+  background: var(--cream2);
+  border: 1px solid rgba(104,117,101,.2);
+  padding: 42px 30px;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.gift-icon {
+  color: var(--terracotta);
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.gift-card h3 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--deep);
+  font-size: 40px;
+  margin: 0 0 15px;
+}
+
+.gift-card p {
+  color: var(--brown);
+  font-size: 26px;
+  line-height: 1.5;
+  margin: 0 0 25px;
+}
+
+.gift-card-actions {
+  margin-top: auto;
+  width: 100%;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.gift-card-actions.with-qr {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.gift-card-actions.with-qr .button {
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+  min-height: 50px;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 1px solid var(--sage);
+  color: var(--deep);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: 22px;
+  line-height: 1.15;
+  text-align: center;
+  transition: .2s ease;
+}
+
+.button:hover {
+  background: var(--sage);
+  color: var(--cream2);
+}
+
+/* =========================================================
+   GIFT CARD EXTRAS (QR + charity buttons)
+   ========================================================= */
+
+.gift-qr {
+  align-self: stretch;
+  aspect-ratio: 1;
+  height: auto;
+  width: auto;
+  flex: none;
+  background: var(--cream);
+  border: 1px solid rgba(104,117,101,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sage);
+  text-align: center;
+  font-size: 7px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+
+.gift-qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.charity-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.charity-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex: none;
+}
+
+/*
+  ZODRA DE QR-CODE KLAAR IS:
+
+  Vervang de placeholder hierboven door:
+
+  <img src="images/ysadora-payment-qr.png"
+       alt="QR-code voor een bijdrage voor Ysadora">
+*/
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closing {
+  min-height: 75vh;
+  background: var(--terracotta);
+  color: var(--cream2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 24px;
+}
+
+.closing-inner {
+  position: relative;
+  z-index: 4;
+  max-width: 700px;
+}
+
+.closing h2 {
+  color: var(--cream2);
+  font-size: clamp(110px, 18vw, 200px);
+  margin: 20px 0 35px;
+}
+
+.closing p {
+  font-family: var(--font-body);
+  font-size: 34px;
+  line-height: 1.45;
+  max-width: 530px;
+  margin: auto;
+}
+
+.closing-flower {
+  position: absolute;
+  font-size: 400px;
+  opacity: .12;
+}
+
+.closing-flower.one {
+  left: -45px;
+  bottom: -70px;
+}
+
+.closing-flower.two {
+  right: -45px;
+  top: -70px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #945f51;
+  color: rgba(255,255,255,.72);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+}
+
+footer a {
+  color: rgba(255,255,255,.92);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .gift-card {
+    padding: 36px 22px;
+  }
+
+  .hero {
+    min-height: 850px;
+  }
+
+  .hero-deer {
+    left: -25px;
+    top: 8%;
+    transform: scale(.7);
+  }
+
+  .hero-bird {
+    right: -5px;
+    top: 11%;
+    transform: scale(.7);
+  }
+
+  .hero-fox {
+    left: -30px;
+    bottom: 7%;
+    transform: scale(.7);
+  }
+
+  .hero-rabbit {
+    right: -30px;
+    bottom: 8%;
+    transform: scale(.7);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .details-list {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .foliage-top-left,
+  .foliage-top-right {
+    opacity: .55;
+    transform: scale(.65);
+  }
+
+  .foliage-bottom-left,
+  .foliage-bottom-right {
+    opacity: .45;
+    transform: scale(.65);
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<header class="hero">
+
+
+  <div class="hero-inner">
+
+    <div class="eyebrow">
+      Er begint een klein verhaal
+    </div>
+
+    <div class="date">
+      28 · 08 · 2026
+    </div>
+
+    <h1>
+      <span class="hero-name">Ysadora</span>
+    </h1>
+
+    <div class="hero-fullname">
+      Zoë Maria Van Boxem van der Esch
+    </div>
+
+  </div>
+
+  <div class="scroll">
+    <span class="scroll-label">Ontdek haar verhaal</span>
+  </div>
+
+</header>
+
+
+<!-- ======================================================
+     INTRO
+======================================================= -->
+
+<section class="intro">
+
+
+
+  <div class="intro-inner">
+
+    <div class="ornament">✿</div>
+
+    <h2>
+      Een nieuw klein<br>
+      avontuur
+    </h2>
+
+    <p>
+      In een rustig hoekje van de wereld kwam een piepklein
+      meisje ter wereld, die alles een tikkeltje magischer
+      maakte.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     WOODLAND
+======================================================= -->
+
+<section class="woodland">
+
+  <div class="moon"></div>
+
+  <div class="stars">
+    <span class="s1">✦</span>
+    <span class="s2">·</span>
+    <span class="s3">✧</span>
+    <span class="s4">·</span>
+    <span class="s5">✦</span>
+    <span class="s6">·</span>
+  </div>
+
+  <div class="hill-back"></div>
+  <div class="hill"></div>
+
+
+  <!-- Foliage -->
+
+
+
+  <div class="woodland-content">
+
+    <div class="woodland-small">
+      En haar naam is
+    </div>
+
+    <h2>Ysadora</h2>
+
+    <div class="woodland-small woodland-small-low">
+      een klein lichtje in ons bos
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- ======================================================
+     DETAILS
+======================================================= -->
+
+<section class="details">
+
+
+
+  <div class="ornament">✿</div>
+
+  <h2>De kleine details</h2>
+
+  <div class="details-list">
+
+    <div class="detail">
+      <div class="detail-icon">☼</div>
+      <div class="detail-label">Geboren</div>
+      <div class="detail-value">28 augustus 2026</div>
+    </div>
+
+    <div class="detail">
+      <div class="detail-icon">♡</div>
+      <div class="detail-label">Gewicht</div>
+      <div class="detail-value">4.00 kg</div>
+    </div>
+
+    <div class="detail">
+      <div class="detail-icon">⌁</div>
+      <div class="detail-label">Lengte</div>
+      <div class="detail-value">53.5 cm</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     GIFTS
+======================================================= -->
+
+<section class="gifts">
+
+
+
+  <div class="gifts-inner">
+
+    <div class="ornament">✿</div>
+
+    <h2>
+      Een klein cadeautje
+    </h2>
+
+    <p class="gifts-intro">
+      Jullie liefde en goede wensen zijn nu al het mooiste
+      cadeau. Wil je Ysadora toch iets extra's schenken,
+      dan vind je hieronder enkele mogelijkheden.
+    </p>
+
+
+    <div class="gift-grid">
+
+
+      <!-- GIFT LIST -->
+
+      <article class="gift-card">
+
+        <div class="gift-icon">♡</div>
+
+        <h3>Haar verlanglijstje</h3>
+
+        <p>
+          Een paar dingen voor Ysadora's eerste avonturen,
+          verzameld in ons online verlanglijstje.
+        </p>
+
+        <div class="gift-card-actions">
+          <!-- REPLACE WITH YOUR REAL GIFT LIST -->
+          <a
+            class="button"
+            href="https://www.buysse-baby-kids.be/geboortelijsten/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Bekijk verlanglijstje
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- CONTRIBUTION: payment link + QR, side by side -->
+
+      <article class="gift-card">
+
+        <div class="gift-icon">✦</div>
+
+        <h3>Vrije bijdrage</h3>
+
+        <p>
+          Wil je liever bijdragen aan iets speciaals voor
+          Ysadora, gebruik dan de betaallink of scan de
+          QR-code hiernaast.
+        </p>
+
+        <div class="gift-card-actions with-qr">
+
+          <!--
+            QR code generated locally to encode the Bancontact
+            link below (not a screenshot of Bancontact's own
+            page, which regenerates a session QR on every load).
+            Scanning it opens this same payment link, where
+            Bancontact then runs the actual payment flow.
+          -->
+          <div class="gift-qr">
+            <img
+              src="images/qr-payment.svg"
+              alt="QR-code voor de betaallink van Ysadora"
+              width="45"
+              height="45">
+          </div>
+
+          <a
+            class="button"
+            href="https://pay.bancontact.com/p2p/9128c634-ee1f-4f81-b8f7-120baf42c6ed"
+            target="_blank"
+            rel="noopener noreferrer">
+            Open betaallink
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHARITY: both organisations, logos + stacked buttons -->
+
+      <article class="gift-card">
+
+        <div class="gift-icon">☁</div>
+
+        <h3>Een groot hart</h3>
+
+        <p>
+          Een gift aan een van deze goede doelen helpt
+          andere gezinnen die een kindje verloren hebben.
+        </p>
+
+        <div class="gift-card-actions">
+
+          <a
+            class="button charity-button"
+            href="https://www.bovendewolken.be/steun-ons/doe-een-gift/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img
+              class="charity-logo"
+              src="images/logo-boven-de-wolken.svg"
+              alt="Boven De Wolken logo">
+            Boven De Wolken
+          </a>
+
+          <a
+            class="button charity-button"
+            href="https://iksteun.berrefonds.be/nl-NL/p/gift-berrefonds"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img
+              class="charity-logo"
+              src="images/berrefonds_logo.png"
+              alt="Berrefonds logo">
+            Berrefonds
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div style="
+      margin-top:38px;
+      font-size:26px;
+      letter-spacing:.04em;
+      color:#81776c;
+    ">
+      Elk gebaar, groot of klein, betekent veel voor ons.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     CLOSING
+======================================================= -->
+
+<section class="closing">
+
+  <div class="closing-flower one">❀</div>
+  <div class="closing-flower two">✿</div>
+
+  <div class="closing-inner">
+
+    <div>♡</div>
+
+    <h2>
+      De kleinste<br>
+      dingen vullen<br>
+      ons hart.
+    </h2>
+
+    <p>
+      Dank je wel om deel uit te maken
+      van het verhaal van ons meisje.
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+  Met liefde gemaakt voor Ysadora · 2026
+</footer>
+
+</body>
+</html>
