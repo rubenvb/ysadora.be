@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ysadora Zoë Maria — Geboorte van Ysadora Van Boxem van der Esch</title>
+<meta name="description" content="Onze dochter Ysadora Zoë Maria Van Boxem van der Esch is geboren. Bekijk de cadeaulijst en ontdek hoe je ons — zonder enige verplichting — een geschenkje kunt geven." />
+<link rel="preconnect" href="https://media.moulinroty-maboutique.com" crossorigin />
+<link rel="preconnect" href="https://www.cottonbird.nl" crossorigin />
+<style>
+  :root{
+    /* "La Forêt de Mawa" palette — warm terracotta, deep forest greens, luminous blues, cream */
+    --terracotta:#c8643a;
+    --terracotta-dark:#a64f2c;
+    --caramel:#d98b53;
+    --leaf-dark:#2f5135;
+    --leaf:#3f6b46;
+    --leaf-light:#6f9a66;
+    --teal:#3a7d83;
+    --teal-light:#6fb3b0;
+    --blue:#2c5b8c;
+    --blue-soft:#5f86b3;
+    --cream:#f7f1e6;
+    --cream-deep:#efe3cf;
+    --ink:#2c2418;
+    --ink-soft:#5b4f3d;
+    --paper:#fbf6ec;
+    --gold:#c79a3b;
+    --shadow:0 18px 50px rgba(44,36,24,.18);
+    --radius:26px;
+    --font-serif:"Cormorant Garamond","Playfair Display",Georgia,"Times New Roman",serif;
+    --font-sans:"Quicksand","Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--font-sans);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  /* Decorative watercolor-wash background, fills the page */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+      radial-gradient(1200px 800px at 12% -8%, rgba(111,179,176,.30), transparent 60%),
+      radial-gradient(1100px 760px at 92% 8%, rgba(193,140,80,.28), transparent 58%),
+      radial-gradient(1000px 700px at 80% 96%, rgba(63,107,70,.26), transparent 60%),
+      radial-gradient(900px 680px at 6% 92%, rgba(95,134,179,.22), transparent 60%),
+      linear-gradient(160deg,#fbf6ec 0%, #f3e9d4 55%, #efe3cf 100%);
+  }
+  /* Subtle paper grain */
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    opacity:.5;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.17  0 0 0 0 0.14  0 0 0 0 0.09  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode:multiply;
+  }
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:64px 22px 80px;
+    overflow:hidden;
+  }
+  .hero-frame{
+    position:relative;
+    z-index:3;
+    max-width:720px;
+    padding:54px 40px;
+    background:rgba(251,246,236,.66);
+    backdrop-filter:blur(2px);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,.5);
+  }
+  .hero .eyebrow{
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    font-weight:600;
+    color:var(--terracotta-dark);
+    margin:0 0 18px;
+  }
+  .hero h1{
+    font-family:var(--font-serif);
+    font-weight:600;
+    font-size:clamp(2.6rem,7vw,4.6rem);
+    line-height:1.04;
+    margin:0 0 6px;
+    color:var(--leaf-dark);
+    letter-spacing:.01em;
+  }
+  .hero .name-zoe{
+    display:block;
+    font-style:italic;
+    color:var(--terracotta);
+    font-weight:500;
+  }
+  .hero .leaf-rule{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    margin:22px auto 18px;color:var(--leaf);
+  }
+  .hero .leaf-rule svg{width:30px;height:30px}
+  .hero .leaf-rule .line{height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--leaf-light),transparent)}
+  .hero p.lead{
+    font-family:var(--font-serif);
+    font-size:clamp(1.15rem,2.6vw,1.5rem);
+    color:var(--ink-soft);
+    margin:0 auto 10px;
+    max-width:46ch;
+  }
+  .hero .meta{
+    margin-top:26px;
+    font-size:.92rem;
+    letter-spacing:.04em;
+    color:var(--leaf-dark);
+  }
+  .hero .meta strong{color:var(--terracotta-dark)}
+
+  /* Hero decorative imagery (Taïgo + foliage) */
+  .deco{position:absolute;z-index:1;pointer-events:none;user-select:none}
+  .deco img{display:block;filter:drop-shadow(0 12px 24px rgba(44,36,24,.22))}
+  .deco.tl{top:-40px;left:-60px;width:340px;transform:rotate(-8deg)}
+  .deco.br{bottom:-50px;right:-70px;width:380px;transform:rotate(7deg) scaleX(-1)}
+  .deco.bl{bottom:-30px;left:-40px;width:230px;opacity:.92}
+  .deco.tr{top:-30px;right:-30px;width:210px;opacity:.9}
+
+  /* Fallback SVG foliage when product images fail to load */
+  .deco .fallback{display:none;width:100%;height:auto}
+
+  /* ---------- SECTION BASE ---------- */
+  section{padding:74px 0;position:relative}
+  .kicker{
+    text-align:center;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    font-weight:600;
+    color:var(--terracotta-dark);
+    margin:0 0 10px;
+  }
+  h2.title{
+    font-family:var(--font-serif);
+    font-weight:600;
+    text-align:center;
+    color:var(--leaf-dark);
+    font-size:clamp(1.9rem,4.6vw,2.8rem);
+    margin:0 auto 14px;
+    max-width:20ch;
+  }
+  .intro{
+    text-align:center;
+    max-width:60ch;
+    margin:0 auto 50px;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+  }
+
+  /* ---------- GIFT CARDS ---------- */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:26px;
+    align-items:stretch;
+  }
+  .card{
+    position:relative;
+    background:rgba(251,246,236,.82);
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:var(--radius);
+    padding:34px 30px 30px;
+    box-shadow:var(--shadow);
+    display:flex;flex-direction:column;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:radial-gradient(420px 220px at 100% 0%,rgba(63,107,70,.10),transparent 70%);
+    pointer-events:none;
+  }
+  .card>*{position:relative;z-index:1}
+  .card .badge{
+    width:64px;height:64px;border-radius:50%;
+    display:grid;place-items:center;margin-bottom:18px;
+    color:#fff;
+    box-shadow:0 8px 18px rgba(44,36,24,.18);
+  }
+  .card .badge svg{width:34px;height:34px}
+  .card.bf .badge{background:linear-gradient(135deg,var(--terracotta),var(--caramel))}
+  .card.bdw .badge{background:linear-gradient(135deg,var(--blue),var(--blue-soft))}
+  .card.buysse .badge{background:linear-gradient(135deg,var(--leaf),var(--leaf-light))}
+  .card.bc .badge{background:linear-gradient(135deg,var(--teal),var(--teal-light))}
+  .card h3{
+    font-family:var(--font-serif);
+    font-size:1.6rem;font-weight:600;margin:0 0 4px;color:var(--leaf-dark);
+  }
+  .card .sub{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta-dark);margin:0 0 12px;font-weight:600}
+  .card p{color:var(--ink-soft);font-size:.98rem;margin:0 0 18px}
+  .card .foot{margin-top:auto;display:flex;flex-direction:column;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    text-decoration:none;
+    padding:13px 22px;border-radius:999px;
+    font-weight:700;font-size:.95rem;letter-spacing:.02em;
+    transition:transform .15s ease,box-shadow .15s ease,background .2s ease;
+    border:1.5px solid transparent;
+    cursor:pointer;
+  }
+  .btn svg{width:18px;height:18px}
+  .btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 10px 22px rgba(168,79,44,.28)}
+  .btn-primary:hover{background:var(--terracotta-dark);transform:translateY(-2px)}
+  .btn-green{background:var(--leaf);color:#fff;box-shadow:0 10px 22px rgba(47,81,53,.26)}
+  .btn-green:hover{background:var(--leaf-dark);transform:translateY(-2px)}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 10px 22px rgba(44,91,140,.24)}
+  .btn-blue:hover{background:#234a74;transform:translateY(-2px)}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 22px rgba(58,125,131,.26)}
+  .btn-teal:hover{background:#306064;transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--leaf-dark);border-color:var(--leaf-light)}
+  .btn-ghost:hover{background:rgba(63,107,70,.08);transform:translateY(-2px)}
+
+  .iban{
+    font-size:.86rem;color:var(--ink-soft);
+    background:rgba(255,255,255,.6);
+    border:1px dashed var(--leaf-light);
+    border-radius:12px;padding:10px 12px;word-break:break-all;
+  }
+  .iban b{color:var(--leaf-dark)}
+
+  /* ---------- BANCONTACT ---------- */
+  .pay{
+    background:linear-gradient(160deg,rgba(255,255,255,.86),rgba(243,233,212,.86));
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:42px 38px;
+    display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center;
+  }
+  .pay h3{font-family:var(--font-serif);font-size:1.7rem;color:var(--leaf-dark);margin:0 0 6px}
+  .pay p{color:var(--ink-soft);margin:0 0 16px;max-width:52ch}
+  .qr{
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    background:#fff;border-radius:18px;padding:18px;
+    box-shadow:0 12px 26px rgba(44,36,24,.18);
+    border:1px solid rgba(0,0,0,.06);
+    min-width:236px;
+  }
+  .qr .qr-img{
+    width:198px;height:198px;border-radius:10px;
+    display:grid;place-items:center;
+    background:repeating-linear-gradient(45deg,#fff 0 10px,#f3efe6 10px 20px);
+    border:1px solid #e7e0d0;
+    overflow:hidden;
+  }
+  .qr .qr-img svg{width:120px;height:120px;color:var(--ink-soft)}
+  .qr .caption{font-size:.78rem;color:var(--ink-soft);text-align:center;letter-spacing:.02em}
+  .qr .caption b{color:var(--teal)}
+  .pay .pay-logos{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px}
+  .pay .pay-logos span{
+    font-size:.74rem;font-weight:700;letter-spacing:.04em;
+    background:#fff;border:1px solid #e3dccb;border-radius:999px;padding:6px 12px;color:var(--ink-soft);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    text-align:center;padding:70px 22px 90px;color:var(--ink-soft);
+    position:relative;
+  }
+  footer .leaf-band{
+    display:flex;justify-content:center;gap:18px;color:var(--leaf-light);margin-bottom:24px;
+  }
+  footer .leaf-band svg{width:26px;height:26px;opacity:.7}
+  footer p{margin:4px 0;font-size:.92rem}
+  footer .signature{font-family:var(--font-serif);font-style:italic;font-size:1.15rem;color:var(--leaf-dark)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:760px){
+    .hero{min-height:auto;padding:90px 18px 60px}
+    .deco.tl,.deco.br{width:200px}
+    .deco.bl,.deco.tr{width:140px}
+    .hero-frame{padding:38px 24px}
+    .pay{grid-template-columns:1fr;text-align:center}
+    .pay .qr{margin:0 auto}
+    section{padding:56px 0}
+  }
+  @media (max-width:420px){
+    .deco.tl,.deco.br{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <!-- Decorative Taïgo & Forêt de Mawa imagery (official product images, with SVG fallback) -->
+  <div class="deco tl" aria-hidden="true">
+    <!-- Taïgo activity plush, collection La Forêt de Mawa — Moulin Roty -->
+    <img alt="" loading="lazy"
+      src="https://media.moulinroty-maboutique.com/pub/media/catalog/product/P/e/Peluche_d_activites_Grand_leopard_Taigo_La_foret_Mawa_Moulin_Roty.png"
+      onerror="this.style.display='none';this.parentNode.querySelector('.fallback').style.display='block'" />
+    <svg class="fallback" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#3f6b46" stroke-width="3" stroke-linecap="round">
+        <path d="M40 60c30-30 90-30 120 0" />
+        <path d="M40 90c30-30 90-30 120 0" />
+        <path d="M40 120c30-30 90-30 120 0" />
+        <ellipse cx="60" cy="140" rx="14" ry="26" transform="rotate(-30 60 140)" />
+        <ellipse cx="140" cy="140" rx="14" ry="26" transform="rotate(30 140 140)" />
+      </g>
+    </svg>
+  </div>
+  <div class="deco br" aria-hidden="true">
+    <!-- Taïgo leopard doudou, collection La Forêt de Mawa — Moulin Roty -->
+    <img alt="" loading="lazy"
+      src="https://media.moulinroty-maboutique.com/pub/media/catalog/product/D/o/Doudou_hochet_leopard_Taigo_La_foret_Mawa_Moulin_Roty.png"
+      onerror="this.style.display='none';this.parentNode.querySelector('.fallback').style.display='block'" />
+    <svg class="fallback" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#6f9a66" stroke-width="3" stroke-linecap="round">
+        <path d="M20 40c40-20 140-20 180 20" />
+        <path d="M20 80c40-20 140-20 180 20" />
+        <path d="M20 120c40-20 140-20 180 20" />
+        <path d="M20 160c40-20 140-20 180 20" />
+      </g>
+    </svg>
+  </div>
+  <div class="deco bl" aria-hidden="true">
+    <svg class="fallback" style="display:block" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#2f5135" opacity=".85">
+        <path d="M120 20c44 36 60 92 0 200-60-108-44-164 0-200z" />
+        <path d="M120 40c-30 50-30 100 0 160 0-60 30-110 0-160z" fill="#3f6b46"/>
+      </g>
+    </svg>
+  </div>
+  <div class="deco tr" aria-hidden="true">
+    <svg class="fallback" style="display:block" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#3a7d83" opacity=".8">
+        <path d="M110 18c40 34 54 86 0 186-54-100-40-152 0-186z" />
+        <circle cx="60" cy="60" r="6"/><circle cx="160" cy="80" r="5"/><circle cx="90" cy="150" r="5"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-frame">
+    <p class="eyebrow">Welkom op de wereld</p>
+    <h1>
+      Ysadora <span class="name-zoe">Zoë Maria</span>
+      <span style="display:block;font-size:.42em;letter-spacing:.18em;color:var(--ink-soft);margin-top:14px;text-transform:uppercase;font-family:var(--font-sans)">Van Boxem van der Esch</span>
+    </h1>
+    <div class="leaf-rule" aria-hidden="true">
+      <span class="line"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c5 4 7 9 0 18C5 12 7 7 12 3z"/><path d="M12 21V8"/><path d="M12 12c-2-2-4-2-6-1"/><path d="M12 14c2-2 4-2 6-1"/></svg>
+      <span class="line"></span>
+    </div>
+    <p class="lead">Met heel ons hart vol liefde kondigen we vol trots de geboorte aan van onze dochter.</p>
+    <p class="meta">
+      Geboren als dochter van <strong>Ruben &amp; zijn lief</strong> ·
+      broertje/zusje van <strong>…</strong>
+    </p>
+    <p class="meta" style="margin-top:6px">Inspiratie &amp; thema: <strong>Taïgo</strong> door Moulin Roty · <em>La Forêt de Mawa</em></p>
+  </div>
+</header>
+
+<!-- ===================== GIFTS ===================== -->
+<section id="cadeau" class="wrap">
+  <p class="kicker">Zonder enige verplichting</p>
+  <h2 class="title">Een geschenkje voor Ysadora</h2>
+  <p class="intro">
+    Wij verwelkomen jullie liefde en blijdschap bovenal. Wie Ysadora graag met iets tangibels wil verwennen,
+    kan hieronder terecht. Dit is geheel vrijblijvend — jouw aanwezigheid en goede wensen zijn ons het meest waard.
+  </p>
+
+  <div class="cards">
+
+    <!-- 1. Geboortelijst Buysse Baby & Kids -->
+    <article class="card buysse">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M5 7v13h14V7M9 11h6M9 15h6M9 3h6v4H9z"/></svg>
+      </div>
+      <h3>Geboortelijst</h3>
+      <p class="sub">Buysse Baby &amp; Kids</p>
+      <p>
+        Onze geboortelijst ligt bij <strong>Buysse Baby &amp; Kids</strong> in Wetteren. Je raadpleegt de lijst online
+        met Ysadora’s voornaam en geboortedatum (formaat <em>ddmmjjjj</em>).
+      </p>
+      <div class="foot">
+        <a class="btn btn-green" href="https://www.buysse-baby-kids.be/geboortelijsten/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          Bekijk de geboortelijst
+        </a>
+        <span class="iban"><b>Winkel:</b> Victor Van Sandelaan, Wetteren · <b>Tel</b> 09/369 64 80</span>
+      </div>
+    </article>
+
+    <!-- 2. Bancontact Pay -->
+    <article class="card bc">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg>
+      </div>
+      <h3>Bancontact Pay</h3>
+      <p class="sub">Snel &amp; veilig betalen</p>
+      <p>
+        Scan de QR-code hieronder met de <strong>Bancontact Pay</strong>-app of je bank-app om een
+        vrij bedrag over te maken — een leuk initiatiefbedrag voor Ysadora.
+      </p>
+      <div class="foot">
+        <a class="btn btn-teal" href="#bancontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3z M20 17v4 M17 20h4"/></svg>
+          Naar QR &amp; betaallink
+        </a>
+      </div>
+    </article>
+
+    <!-- 3. Berrefonds -->
+    <article class="card bf">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.2-9.1C1.4 8.7 3.6 5.5 7 5.5c2 0 3.3 1.1 5 3 1.7-1.9 3-3 5-3 3.4 0 5.6 3.2 4.2 6.4C19 16.4 12 21 12 21z"/></svg>
+      </div>
+      <h3>Berrefonds</h3>
+      <p class="sub">Goed doel</p>
+      <p>
+        Het <strong>Berrefonds</strong> steunt ouders en families die hun kindje verliezen tijdens of kort na
+        de zwangerschap, met Koesterkoffers en troost. Een gift vieren wij extra, in ere van nieuw leven.
+      </p>
+      <div class="foot">
+        <a class="btn btn-primary" href="https://berrefonds.be/ik-wil-het-berrefonds-graag-helpen/doe-een-gift/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Doe een gift
+        </a>
+        <span class="iban"><b>IBAN</b> BE11 9731 1320 0448 · <b>BIC</b> ARSPBE22</span>
+      </div>
+    </article>
+
+    <!-- 4. Boven De Wolken -->
+    <article class="card bdw">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.3A4 4 0 0 1 18 16z"/><path d="M12 19l1.5 2 1.5-2-1.5 2-1.5-2z M16 19l1.5 2"/></svg>
+      </div>
+      <h3>Boven De Wolken</h3>
+      <p class="sub">Goed doel</p>
+      <p>
+        <strong>Boven De Wolken</strong> vzw biedt ouders van een sterrenkindje gratis een fotoreportage
+        als blijvende, tastbare herinnering. Een warme organisatie, volledig afhankelijk van giften.
+      </p>
+      <div class="foot">
+        <a class="btn btn-blue" href="https://steun.bovendewolken.be/doe-een-gift/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Steun Boven De Wolken
+        </a>
+        <span class="iban"><b>IBAN</b> BE04 0018 2478 6531 · <b>BIC</b> GEBABEBB</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== BANCONTACT PAY ===================== -->
+<section id="bancontact" class="wrap">
+  <p class="kicker">Bancontact Pay</p>
+  <h2 class="title">Betaal met de Bancontact-app</h2>
+  <p class="intro">
+    Scan de QR-code met de Bancontact Pay-app of je bank-app, of gebruik de betaallink hieronder.
+    Bedankt voor je lieve gebaar!
+  </p>
+
+  <div class="pay">
+    <div>
+      <h3>Een vrij bedrag voor Ysadora</h3>
+      <p>
+        Open de Bancontact Pay-app of je bank-app op je smartphone en scan de QR-code hiernaast.
+        Je bepaalt zelf het bedrag — elke bijdrage is van harte welkom. Liever via een link op je
+        telefoon? Tik op de knop hieronder.
+      </p>
+      <!--
+        ╔══════════════════════════════════════════════════════════════════╗
+        ║  BANCONTACT PAY — QR-code & BETAALLINK HIER PLAATSEN             ║
+        ║                                                                  ║
+        ║  Vervang hieronder twee dingen zodra je een geldige link hebt:    ║
+        ║   1) het href-attribuut van de <a class="btn btn-teal"> knop      ║
+        ║      (zet jouw Bancontact Pro betaal-URL erin)                    ║
+        ║   2) de afbeelding in .qr-img: vervang de SVG-placeholder door    ║
+        ║      een <img src="jouw-qrcode.png" alt="Bancontact QR" />        ║
+        ║                                                                  ║
+        ║  Een QR via de Bancontact Pro-app verloort na korte tijd, daarom ║
+        ║  wordt deze pas vlak voor / tijdens het delen actief gezet.      ║
+        ╚══════════════════════════════════════════════════════════════════╝
+      -->
+      <a class="btn btn-teal" href="https://www.bancontact.com/nl/particulier/online" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        Open de betaallink
+      </a>
+      <div class="pay-logos" aria-label="Ondersteunde betaalmethodes">
+        <span>Bancontact Pay</span><span>Payconiq</span><span>Bank-app</span>
+      </div>
+    </div>
+
+    <div class="qr" aria-label="Bancontact Pay QR-code">
+      <!-- PLACEHOLDER QR — vervang door echte QR-afbeelding (zie commentaar links) -->
+      <div class="qr-img" id="qrPlaceholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>
+          <path d="M14 14h3v3h-3z M20 17v4 M17 20h4 M14 20h3"/>
+        </svg>
+      </div>
+      <span class="caption">Scan met <b>Bancontact Pay</b><br/>(QR &amp; link worden hier actief gezet)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="leaf-band" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c5 4 7 9 0 18C5 12 7 7 12 3z"/><path d="M12 21V8"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-5 4-7 9 0 18 7-9 5-14 0-18z"/></svg>
+  </div>
+  <p class="signature">Met liefde gemaakt voor Ysadora Zoë Maria</p>
+  <p>Thema: Taïgo door Moulin Roty · geïnspireerd door La Forêt de Mawa · Cottonbird.nl</p>
+  <p style="opacity:.7;font-size:.82rem">© <span id="yr"></span> · Ysadora.be</p>
+</footer>
+
+<script>
+  // Jaar automatisch invullen
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Toon een zachte hint bij de QR-placeholder
+  (function(){
+    var ph = document.getElementById('qrPlaceholder');
+    if(!ph) return;
+    ph.addEventListener('click', function(){
+      alert('Hier komt binnenkort de actieve Bancontact Pay QR-code.\nDe code wordt vlak voor het delen geactiveerd (beperkte geldigheid).');
+    });
+  })();
+</script>
+</body>
+</html>
