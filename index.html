@@ -228,29 +228,34 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   z-index: 6;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.scroll-label {
-  display: inline-block;
-  font-size: 24px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--deep);
-  background: rgba(255,255,255,.88);
-  padding: 12px 26px;
-  border-radius: 999px;
-  box-shadow: 0 4px 16px rgba(0,0,0,.14);
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 0 12px rgba(0,0,0,.16);
+  animation: scrollDotPulse 1.8s ease-in-out infinite;
 }
 
-.scroll::after {
-  content: "";
-  width: 2px;
-  height: 32px;
-  display: block;
-  background: rgba(255,255,255,.88);
-  margin: 8px auto 0;
-  box-shadow: 0 0 10px rgba(0,0,0,.14);
+.scroll-dot:nth-child(1) { animation-delay: 0s; }
+.scroll-dot:nth-child(2) { animation-delay: .22s; }
+.scroll-dot:nth-child(3) { animation-delay: .44s; }
+
+@keyframes scrollDotPulse {
+  0%, 100% {
+    opacity: .25;
+    transform: scale(.7);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 /* =========================================================
@@ -344,13 +349,15 @@ h2 {
    ========================================================= */
 
 .woodland {
-  min-height: 650px;
+  min-height: 1050px;
   overflow: hidden;
   background: var(--sage);
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding-bottom: 110px;
+  box-sizing: border-box;
 }
 
 .moon {
@@ -384,20 +391,20 @@ h2 {
 
 .hill {
   position: absolute;
-  bottom: -150px;
+  bottom: -220px;
   left: -10%;
   width: 120%;
-  height: 330px;
+  height: 700px;
   border-radius: 50% 50% 0 0;
   background: var(--deep);
 }
 
 .hill-back {
   position: absolute;
-  bottom: -95px;
+  bottom: -160px;
   left: -20%;
   width: 115%;
-  height: 280px;
+  height: 650px;
   border-radius: 50% 50% 0 0;
   background: var(--leaf);
 }
@@ -409,22 +416,20 @@ h2 {
   color: var(--cream2);
 }
 
-.woodland-small {
-  text-transform: uppercase;
-  letter-spacing: .18em;
-  font-size: 32px;
-  opacity: .8;
-}
-
-.woodland-small-low {
-  margin-top: 90px;
+.woodland-poem {
+  margin-top: 190px;
+  font-family: var(--font-body);
+  font-size: 56px;
+  line-height: 1.65;
+  color: var(--cream2);
+  opacity: .95;
 }
 
 .woodland h2 {
   font-family: var(--font-name);
   font-weight: normal;
   color: var(--cream2);
-  font-size: clamp(116px, 20vw, 220px);
+  font-size: clamp(100px, 14vw, 148px);
   margin: 20px 0;
 }
 
@@ -793,10 +798,6 @@ footer a {
 
   <div class="hero-inner">
 
-    <div class="eyebrow">
-      Er begint een klein verhaal
-    </div>
-
     <div class="date">
       28 · 08 · 2026
     </div>
@@ -812,7 +813,9 @@ footer a {
   </div>
 
   <div class="scroll">
-    <span class="scroll-label">Ontdek haar verhaal</span>
+    <span class="scroll-dot"></span>
+    <span class="scroll-dot"></span>
+    <span class="scroll-dot"></span>
   </div>
 
 </header>
@@ -873,14 +876,13 @@ footer a {
 
   <div class="woodland-content">
 
-    <div class="woodland-small">
-      En haar naam is
-    </div>
-
     <h2>Ysadora</h2>
 
-    <div class="woodland-small woodland-small-low">
-      een klein lichtje in ons bos
+    <div class="woodland-poem">
+      Een stille wens, een diep verlangen<br>
+      Verdriet blijft bestaan, liefde groeit door<br>
+      De rust is gedaan, geen nacht als ervoor<br>
+      Nu ga jij onze hoop door geluk vervangen
     </div>
 
   </div>
@@ -901,7 +903,7 @@ footer a {
 
   <div class="ornament">✿</div>
 
-  <h2>De kleine details</h2>
+  <h2>Hiermee kwam ze uit haar startblokken</h2>
 
   <div class="details-list">
 
