@@ -227,7 +227,7 @@ h2 {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 110px;
+  padding: 0 24px 110px;
   box-sizing: border-box;
 }
 
@@ -290,10 +290,14 @@ h2 {
 .woodland-poem {
   margin-top: 190px;
   font-family: var(--font-body);
-  font-size: 56px;
+  font-size: clamp(32px, 10vw, 56px);
   line-height: 1.65;
   color: var(--cream2);
   opacity: .95;
+}
+
+.poem-line {
+  white-space: nowrap;
 }
 
 .woodland h2 {
@@ -508,15 +512,6 @@ h2 {
   flex: none;
 }
 
-/*
-  ZODRA DE QR-CODE KLAAR IS:
-
-  Vervang de placeholder hierboven door:
-
-  <img src="images/ysadora-payment-qr.png"
-       alt="QR-code voor een bijdrage voor Ysadora">
-*/
-
 /* =========================================================
    CLOSING
    ========================================================= */
@@ -704,10 +699,10 @@ footer a {
     <h2>Ysadora</h2>
 
     <div class="woodland-poem">
-      Een stille wens, een diep verlangen<br>
-      Verdriet blijft bestaan, liefde groeit door<br>
-      De rust is gedaan, geen nacht als ervoor<br>
-      Nu ga jij onze hoop door geluk vervangen
+      <div class="poem-line">Een stille wens, een diep verlangen</div>
+      <div class="poem-line">Verdriet blijft bestaan, liefde groeit door</div>
+      <div class="poem-line">De rust is gedaan, geen nacht als ervoor</div>
+      <div class="poem-line">Nu ga jij onze hoop door geluk vervangen</div>
     </div>
 
   </div>
