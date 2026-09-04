@@ -61,83 +61,6 @@ a {
 }
 
 /* =========================================================
-   GLOBAL BOTANICALS
-   ========================================================= */
-
-.foliage {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.foliage svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.foliage-top-left {
-  width: 330px;
-  height: 300px;
-  left: -65px;
-  top: -30px;
-}
-
-.foliage-top-right {
-  width: 300px;
-  height: 320px;
-  right: -60px;
-  top: -35px;
-  transform: scaleX(-1);
-}
-
-.foliage-bottom-left {
-  width: 330px;
-  height: 300px;
-  left: -70px;
-  bottom: -70px;
-  transform: rotate(8deg);
-}
-
-.foliage-bottom-right {
-  width: 350px;
-  height: 300px;
-  right: -70px;
-  bottom: -60px;
-  transform: scaleX(-1) rotate(8deg);
-}
-
-.leaf {
-  fill: var(--sage);
-}
-
-.leaf-dark {
-  fill: var(--deep);
-}
-
-.leaf-light {
-  fill: #819078;
-}
-
-.flower {
-  fill: var(--terracotta);
-}
-
-.flower-light {
-  fill: var(--pink);
-}
-
-.trunk {
-  fill: var(--brown);
-}
-
-.branch-line {
-  stroke: var(--deep);
-  stroke-width: 2;
-  fill: none;
-}
-
-/* =========================================================
    HERO
    ========================================================= */
 
@@ -180,14 +103,6 @@ a {
   text-shadow:
     0 2px 20px rgba(255,255,255,.9),
     0 1px 4px rgba(255,255,255,.8);
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  font-size: 30px;
-  color: var(--sage);
-  margin-bottom: 14px;
 }
 
 h1 {
@@ -256,50 +171,6 @@ h1 {
     opacity: 1;
     transform: scale(1.2);
   }
-}
-
-/* =========================================================
-   ORIGINAL ANIMALS
-   ========================================================= */
-
-.animal {
-  position: absolute;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.animal svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.hero-fox {
-  width: 155px;
-  height: 155px;
-  left: 7%;
-  bottom: 10%;
-}
-
-.hero-rabbit {
-  width: 130px;
-  height: 150px;
-  right: 7%;
-  bottom: 12%;
-}
-
-.hero-bird {
-  width: 90px;
-  height: 90px;
-  right: 17%;
-  top: 15%;
-}
-
-.hero-deer {
-  width: 110px;
-  height: 150px;
-  left: 14%;
-  top: 15%;
 }
 
 /* =========================================================
@@ -733,35 +604,6 @@ footer a {
     min-height: 850px;
   }
 
-  .hero-deer {
-    left: -25px;
-    top: 8%;
-    transform: scale(.7);
-  }
-
-  .hero-bird {
-    right: -5px;
-    top: 11%;
-    transform: scale(.7);
-  }
-
-  .hero-fox {
-    left: -30px;
-    bottom: 7%;
-    transform: scale(.7);
-  }
-
-  .hero-rabbit {
-    right: -30px;
-    bottom: 8%;
-    transform: scale(.7);
-  }
-
-  .story-grid {
-    grid-template-columns: 1fr;
-    gap: 55px;
-  }
-
   .details-list {
     grid-template-columns: 1fr;
     gap: 5px;
@@ -769,18 +611,6 @@ footer a {
 
   .gift-grid {
     grid-template-columns: 1fr;
-  }
-
-  .foliage-top-left,
-  .foliage-top-right {
-    opacity: .55;
-    transform: scale(.65);
-  }
-
-  .foliage-bottom-left,
-  .foliage-bottom-right {
-    opacity: .45;
-    transform: scale(.65);
   }
 }
 </style>
@@ -868,11 +698,6 @@ footer a {
 
   <div class="hill-back"></div>
   <div class="hill"></div>
-
-
-  <!-- Foliage -->
-
-
 
   <div class="woodland-content">
 
